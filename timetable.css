@@ -1,0 +1,87 @@
+body {
+    background: linear-gradient(135deg, #f5d020 0%, #f53803 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.95);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    padding: 32px 24px;
+}
+
+input[type="number"] {
+    padding: 10px 14px;
+    margin: 0 8px 16px 0;
+    border: 1.5px solid #f53803;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+}
+
+input[type="number"]:focus {
+    border: 2px solid #f5d020;
+}
+
+button {
+    background: linear-gradient(90deg, #f53803 0%, #f5d020 100%);
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(245,56,3,0.12);
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #f5d020 0%, #f53803 100%);
+}
+
+#displayTable {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+#displayTable > div {
+    background: linear-gradient(120deg, #f5d020 0%, #f53803 100%);
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(245,56,3,0.13);
+    padding: 22px 18px 18px 18px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.15s;
+}
+
+#displayTable > div:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(245,56,3,0.18);
+}
+
+#displayTable h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #fffbe7;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+#displayTable h5 {
+    margin: 3px 0;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 0.5px;
+}

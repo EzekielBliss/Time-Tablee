@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time-Table</title>
+    <link rel="stylesheet" href="timetable.css" />
+  </head>
+  <body>
+    <div id="main">
+      <input type="number" id="start" placeholder="Start" />
+      <input type="number" id="end" placeholder="End" />
+      <button onclick="generateTimeTable()">Generate Table</button>
+      <div id="displayTable"></div>
+    </div>
+  </body>
+</html>
+<script>
+  function generateTimeTable() {
+    let start = parseInt(document.getElementById("start").value);
+    let end = parseInt(document.getElementById("end").value);
+    let displayTable = document.getElementById("displayTable");
+
+    displayTable.innerHTML = ``;
+
+    if (isNaN(start) || isNaN(end) || start > end) {
+      displayTable.innerHTML = `<div><h2>Please enter a valid range.</h2></div>`;
+      return;
+    }
+
+    for (let num = start; num <= end; num++) {
+      let tableHTML = `<div><h2>Table ${num}</h2>`;
+      for (let i = 1; i < 13; i++) {
+        let mult = num * i;
+        tableHTML += `<h5>${num} * ${i} = ${mult}</h5>`;
+      }
+      tableHTML += `</div>`;
+      displayTable.innerHTML += tableHTML;
+    }
+  }
+</script>
