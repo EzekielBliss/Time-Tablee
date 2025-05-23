@@ -23,7 +23,7 @@
 
     displayTable.innerHTML = ``;
 
-    if (isNaN(start) || isNaN(end) || start > end) {
+    if (isNaN(start) || isNaN(end)) {
       displayTable.innerHTML = `<div><h2>Please enter a valid range.</h2></div>`;
       return;
     }
@@ -36,6 +36,17 @@
       }
       tableHTML += `</div>`;
       displayTable.innerHTML += tableHTML;
+    }
+    if (start > end) {
+      for (let num = start; num >= end; num--) {
+        let tableHTML = `<div><h2>Table ${num}</h2>`;
+        for (let i = 1; i < 13; i++) {
+          let mult = num * i;
+          tableHTML += `<h5>${num} * ${i} = ${mult}</h5>`;
+        }
+        tableHTML += `</div>`;
+        displayTable.innerHTML += tableHTML;
+      }
     }
   }
 </script>
