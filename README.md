@@ -16,7 +16,7 @@ A simple yet dynamic web app built with HTML, CSS, and JavaScript that allows us
 
 ## 🚀 Demo
 
-[Live Demo](your-deployment-link)
+Live Demo: https://ezekielbliss.github.io/Time-Tablee/
 
 ## 📂 Project Structure
 
